@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio of Evan Falconer, a mechanical engineer focused on mechanical design, robotics, manufacturing, and rapid prototyping."
+      content="Portfolio of Evan Falconer, a multidisciplinary mechanical engineer focused on human-centered design, robotics, biomedical engineering, and manufacturing."
     />
-    <meta name="theme-color" content="#f2f0e9" />
+    <meta name="theme-color" content="#292c2a" />
     <title>Evan Falconer | Mechanical Engineer</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=13" />
+    <script src="script.js?v=13" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -35,12 +35,20 @@
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span></span> Mechanical design · Robotics · Manufacturing</p>
-          <h1 id="hero-title">I turn complex systems into <em>working hardware.</em></h1>
+          <p class="eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="field field-mechanical">Mechanical</span>
+            <span aria-hidden="true">·</span>
+            <span class="field field-biomedical">Biomedical</span>
+            <span aria-hidden="true">·</span>
+            <span class="field field-computing">Computing</span>
+            <span aria-hidden="true">·</span>
+            <span class="field field-electrical">Electrical</span>
+          </p>
+          <h1 id="hero-title">A jack of all trades, <em>focused on people.</em></h1>
           <p class="hero-intro">
-            I’m Evan Falconer, a mechanical engineer and computer science minor at the
-            University of Utah. I design, prototype, test, and improve systems across
-            robotics, manufacturing, and human-centered engineering.
+            I’m Evan Falconer. I learn across disciplines to design, prototype, test, and improve systems
+            around the people who ultimately use them.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#work">View selected work</a>
@@ -48,55 +56,145 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="drawing-label label-a">DESIGN</div>
-          <div class="drawing-label label-b">BUILD</div>
-          <div class="drawing-label label-c">TEST</div>
-          <svg viewBox="0 0 600 600" role="img">
-            <circle class="orbit orbit-1" cx="300" cy="300" r="180" />
-            <circle class="orbit orbit-2" cx="300" cy="300" r="112" />
-            <path class="shape-fill" d="M300 126 451 213 451 387 300 474 149 387 149 213Z" />
-            <path class="shape-line" d="M300 126 451 213 451 387 300 474 149 387 149 213ZM149 213l151 87 151-87M300 300v174" />
-            <circle class="node node-a" cx="300" cy="126" r="12" />
-            <circle class="node node-b" cx="451" cy="387" r="12" />
-            <circle class="node node-c" cx="149" cy="387" r="12" />
-          </svg>
-          <p>Concept <span>→</span> Prototype <span>→</span> Validation</p>
+        <div class="hero-visual discipline-carousel reveal" data-discipline-carousel>
+          <div class="discipline-viewport" tabindex="0" role="region" aria-label="Engineering disciplines">
+            <div class="discipline-track">
+              <article class="discipline-card mechanical-suit" data-position="active" aria-current="true" aria-label="Mechanical engineering Jack card">
+                <span class="discipline-corner discipline-corner-top">J<i>♦</i></span>
+                <div class="discipline-motif">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <g>
+                      <circle cx="60" cy="60" r="32"/>
+                      <circle cx="60" cy="60" r="11"/>
+                      <path d="M60 28v21M60 71v21M28 60h21M71 60h21M37 37l15 15M68 68l15 15M83 37 68 52M52 68 37 83"/>
+                      <rect x="53" y="12" width="14" height="16" rx="2"/>
+                      <rect x="53" y="12" width="14" height="16" rx="2" transform="rotate(45 60 60)"/>
+                      <rect x="53" y="12" width="14" height="16" rx="2" transform="rotate(90 60 60)"/>
+                      <rect x="53" y="12" width="14" height="16" rx="2" transform="rotate(135 60 60)"/>
+                      <rect x="53" y="12" width="14" height="16" rx="2" transform="rotate(180 60 60)"/>
+                      <rect x="53" y="12" width="14" height="16" rx="2" transform="rotate(225 60 60)"/>
+                      <rect x="53" y="12" width="14" height="16" rx="2" transform="rotate(270 60 60)"/>
+                      <rect x="53" y="12" width="14" height="16" rx="2" transform="rotate(315 60 60)"/>
+                    </g>
+                  </svg>
+                </div>
+                <h2>Mechanical</h2>
+                <span class="discipline-corner discipline-corner-bottom">J<i>♦</i></span>
+              </article>
+
+              <article class="discipline-card biomedical-suit" data-position="next" aria-current="false" aria-label="Biomedical engineering Jack card">
+                <span class="discipline-corner discipline-corner-top">J<i>♥</i></span>
+                <div class="discipline-motif">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <g class="bio-leaf">
+                      <path d="M53 77C42 62 47 45 70 36c8 19 2 34-17 41Z"/>
+                      <path d="M51 72 68 41"/>
+                    </g>
+                    <g class="dna-helix">
+                      <path d="M18 14c0 12 42 12 42 24S18 50 18 62s42 12 42 24-42 12-42 24"/>
+                      <path d="M60 14c0 12-42 12-42 24s42 12 42 24-42 12-42 24 42 12 42 24"/>
+                      <path d="M18 14h42M18 38h42M18 62h42M18 86h42M18 110h42"/>
+                    </g>
+                    <g class="bio-gear">
+                      <circle cx="88" cy="82" r="16"/><circle cx="88" cy="82" r="5"/>
+                      <path d="M88 66v11M88 87v11M72 82h11M93 82h11M77 71l8 8M91 85l8 8M99 71l-8 8M85 85l-8 8"/>
+                      <rect x="85" y="58" width="6" height="8" rx="1"/>
+                      <rect x="85" y="58" width="6" height="8" rx="1" transform="rotate(45 88 82)"/>
+                      <rect x="85" y="58" width="6" height="8" rx="1" transform="rotate(90 88 82)"/>
+                      <rect x="85" y="58" width="6" height="8" rx="1" transform="rotate(135 88 82)"/>
+                      <rect x="85" y="58" width="6" height="8" rx="1" transform="rotate(180 88 82)"/>
+                      <rect x="85" y="58" width="6" height="8" rx="1" transform="rotate(225 88 82)"/>
+                      <rect x="85" y="58" width="6" height="8" rx="1" transform="rotate(270 88 82)"/>
+                      <rect x="85" y="58" width="6" height="8" rx="1" transform="rotate(315 88 82)"/>
+                    </g>
+                  </svg>
+                </div>
+                <h2>Biomedical</h2>
+                <span class="discipline-corner discipline-corner-bottom">J<i>♥</i></span>
+              </article>
+
+              <article class="discipline-card computing-suit" data-position="far" aria-current="false" aria-label="Computing Jack card">
+                <span class="discipline-corner discipline-corner-top">J<i>♠</i></span>
+                <div class="discipline-motif">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <rect x="18" y="24" width="84" height="59" rx="5"/>
+                    <path d="M48 98h24M60 83v15M43 43 31 54l12 11M77 43l12 11-12 11M68 37 52 71"/>
+                  </svg>
+                </div>
+                <h2>Computing</h2>
+                <span class="discipline-corner discipline-corner-bottom">J<i>♠</i></span>
+              </article>
+
+              <article class="discipline-card electrical-suit" data-position="previous" aria-current="false" aria-label="Electrical engineering Jack card">
+                <span class="discipline-corner discipline-corner-top">J<i>♣</i></span>
+                <div class="discipline-motif">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <path d="M39 72c-9-7-15-18-15-30a36 36 0 0 1 72 0c0 12-6 23-15 30-5 4-7 9-7 14H46c0-5-2-10-7-14Z"/>
+                    <path d="M46 86h28M48 95h24M53 104h14M52 85V65l-9-15M68 85V65l9-15M43 50l9 3 8-11 8 11 9-3M60 2v9M15 18l8 7M105 18l-8 7M7 48h11M102 48h11"/>
+                  </svg>
+                </div>
+                <h2>Electrical</h2>
+                <span class="discipline-corner discipline-corner-bottom">J<i>♣</i></span>
+              </article>
+            </div>
+          </div>
+          <div class="discipline-controls">
+            <button type="button" data-discipline-prev aria-label="Previous discipline">←</button>
+            <span data-discipline-status aria-live="polite">1 / 4</span>
+            <button type="button" data-discipline-next aria-label="Next discipline">→</button>
+          </div>
+          <p class="hand-caption">Swipe the deck <span>·</span> explore the toolkit</p>
         </div>
 
         <div class="hero-index" aria-hidden="true">01 / 04</div>
       </section>
 
       <section class="stat-strip" aria-label="Highlights">
-        <div><strong>50+</strong><span>parts integrated in a production assembly</span></div>
-        <div><strong>95%</strong><span>downtime reduction through troubleshooting</span></div>
-        <div><strong>300%</strong><span>increase in robotic stand value</span></div>
-        <div><strong>2027</strong><span>B.S. Mechanical Engineering</span></div>
+        <div class="stat-mechanical"><strong>50+</strong><span>parts integrated in a production assembly</span></div>
+        <div class="stat-black"><strong>95%</strong><span>downtime reduction through troubleshooting</span></div>
+        <div class="stat-computing"><strong>300%</strong><span>increase in robotic stand value</span></div>
+        <div class="stat-biomedical"><strong>25%</strong><span>improvement in muscle-signal detection accuracy</span></div>
       </section>
 
       <section class="work section" id="work" aria-labelledby="work-heading">
         <div class="section-heading reveal">
           <div>
             <p class="section-number">01 — Selected work</p>
-            <h2 id="work-heading">Built through iteration.</h2>
+            <h2 id="work-heading">What I've built.</h2>
           </div>
           <p>A selection of technical projects spanning physical design, controls, research, and manufacturing.</p>
         </div>
 
         <div class="project-grid">
-          <article class="project-card project-featured reveal">
-            <div class="project-art art-drone" aria-hidden="true">
-              <span class="art-index">01</span>
-              <svg viewBox="0 0 500 320">
-                <g class="drone-lines">
-                  <circle cx="115" cy="88" r="58"/><circle cx="385" cy="88" r="58"/>
-                  <circle cx="115" cy="232" r="58"/><circle cx="385" cy="232" r="58"/>
-                  <path d="M115 88 250 160 385 88M115 232 250 160 385 232"/>
-                  <rect x="205" y="115" width="90" height="90" rx="18" transform="rotate(45 250 160)"/>
-                  <circle cx="250" cy="160" r="18"/>
-                </g>
-              </svg>
-              <p>PROJECT IMAGE<br />COMING NEXT</p>
+          <article class="project-card mechanical-card reveal" data-suit="♠">
+            <div class="project-art project-carousel" data-carousel aria-label="3D-Printed Quadcopter images">
+              <div class="carousel-track">
+                <div class="carousel-slide project-photo">
+                  <span class="art-index">01.1</span>
+                  <img src="assets/images/projects/quadcopter/new-design.jpg" alt="Completed white 3D-printed quadcopter on a wood table" loading="lazy" decoding="async" />
+                  <p>Final printed airframe</p>
+                </div>
+                <div class="carousel-slide project-photo">
+                  <span class="art-index">01.2</span>
+                  <img src="assets/images/projects/quadcopter/old-design.png" alt="Earlier white quadcopter design resting on carpet" loading="lazy" decoding="async" />
+                  <p>Earlier design iteration</p>
+                </div>
+                <div class="carousel-slide project-photo image-contain">
+                  <span class="art-index">01.3</span>
+                  <img src="assets/images/projects/quadcopter/cad-model.jpg" alt="SolidWorks structural simulation of the quadcopter frame" loading="lazy" decoding="async" />
+                  <p>Structural simulation</p>
+                </div>
+                <div class="carousel-slide project-photo image-contain">
+                  <span class="art-index">01.4</span>
+                  <img src="assets/images/projects/quadcopter/regular-drone.jpg" alt="Black quadcopter airframe with exposed electronics" loading="lazy" decoding="async" />
+                  <p>On market inspiration</p>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button type="button" data-carousel-prev aria-label="Previous quadcopter image">←</button>
+                <span data-carousel-status aria-live="polite">1 / 4</span>
+                <button type="button" data-carousel-next aria-label="Next quadcopter image">→</button>
+              </div>
             </div>
             <div class="project-copy">
               <div class="project-meta"><span>Mechanical Design</span><span>2025</span></div>
@@ -111,11 +209,30 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-art art-emg" aria-hidden="true">
-              <span class="art-index">02</span>
-              <svg viewBox="0 0 500 320"><path d="M20 160h70l24-82 45 172 42-125 32 68 35-33h58l27-87 48 175 37-88h62" /></svg>
-              <p>PROJECT IMAGE<br />COMING NEXT</p>
+          <article class="project-card computing-card reveal" data-suit="♥">
+            <div class="project-art project-carousel" data-carousel aria-label="sEMG Control System images">
+              <div class="carousel-track">
+                <div class="carousel-slide project-photo">
+                  <span class="art-index">02.1</span>
+                  <img src="assets/images/projects/emg/subjectTrial.jpeg" alt="Participant using sEMG sensors to interact with a KUKA robot" loading="lazy" decoding="async" />
+                  <p>sEMG-guided robot trial</p>
+                </div>
+                <div class="carousel-slide project-photo image-contain">
+                  <span class="art-index">02.2</span>
+                  <img src="assets/images/projects/emg/subjectTesting.png" alt="Participant controlling an on-screen task with neck-mounted sensors" loading="lazy" decoding="async" />
+                  <p>Live control testing</p>
+                </div>
+                <div class="carousel-slide project-photo">
+                  <span class="art-index">02.3</span>
+                  <img src="assets/images/projects/emg/emgGui.jpg" alt="Muscle-signal visualization interface showing activation data" loading="lazy" decoding="async" />
+                  <p>Signal visualization</p>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button type="button" data-carousel-prev aria-label="Previous sEMG image">←</button>
+                <span data-carousel-status aria-live="polite">1 / 3</span>
+                <button type="button" data-carousel-next aria-label="Next sEMG image">→</button>
+              </div>
             </div>
             <div class="project-copy">
               <div class="project-meta"><span>Robotics + Controls</span><span>2024–25</span></div>
@@ -128,13 +245,35 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-art art-capsule" aria-hidden="true">
-              <span class="art-index">03</span>
-              <svg viewBox="0 0 500 320">
-                <g><rect x="190" y="48" width="120" height="224" rx="60"/><path d="M190 160h120"/><path d="M78 160h67M355 160h67M115 123v74M385 123v74"/></g>
-              </svg>
-              <p>PROJECT IMAGE<br />COMING NEXT</p>
+          <article class="project-card black-card reveal" data-suit="♦">
+            <div class="project-art project-carousel" data-carousel aria-label="Capsule Cleaning Mechanism images">
+              <div class="carousel-track">
+                <div class="carousel-slide project-photo">
+                  <span class="art-index">03.1</span>
+                  <img src="assets/images/projects/capsule/iterations2.jpg" alt="Three successive perforated top-plate prototypes for the capsule cleaner" loading="lazy" decoding="async" />
+                  <p>Top-plate iterations</p>
+                </div>
+                <div class="carousel-slide project-photo">
+                  <span class="art-index">03.2</span>
+                  <img src="assets/images/projects/capsule/iterations.jpg" alt="Three successive airflow enclosure prototypes for the capsule cleaner" loading="lazy" decoding="async" />
+                  <p>Airflow interface iterations</p>
+                </div>
+                <div class="carousel-slide project-photo image-contain">
+                  <span class="art-index">03.3</span>
+                  <img src="assets/images/projects/capsule/capsule-cad2.png" alt="CAD rendering of the perforated capsule-cleaner top plate" loading="lazy" decoding="async" />
+                  <p>Perforated top-plate CAD</p>
+                </div>
+                <div class="carousel-slide project-photo image-contain">
+                  <span class="art-index">03.4</span>
+                  <img src="assets/images/projects/capsule/capsule-cad.png" alt="CAD rendering of the capsule-cleaner enclosure and hose ports" loading="lazy" decoding="async" />
+                  <p>Enclosure and port CAD</p>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button type="button" data-carousel-prev aria-label="Previous capsule mechanism image">←</button>
+                <span data-carousel-status aria-live="polite">1 / 4</span>
+                <button type="button" data-carousel-next aria-label="Next capsule mechanism image">→</button>
+              </div>
             </div>
             <div class="project-copy">
               <div class="project-meta"><span>Manufacturing</span><span>2025</span></div>
@@ -147,11 +286,35 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-art art-nir" aria-hidden="true">
-              <span class="art-index">04</span>
-              <svg viewBox="0 0 500 320"><path d="M82 162c55-73 116-74 168-2s114 69 168-2M80 205c58-70 117-73 170-1s112 70 170-1"/><circle cx="250" cy="160" r="93"/></svg>
-              <p>PROJECT IMAGE<br />COMING NEXT</p>
+          <article class="project-card biomedical-card reveal" data-suit="♣">
+            <div class="project-art project-carousel" data-carousel aria-label="NIR Arterial Visualization Cuff images">
+              <div class="carousel-track">
+                <div class="carousel-slide project-photo">
+                  <span class="art-index">04.1</span>
+                  <img src="assets/images/projects/nir/nirFinal1.jpg" alt="Completed near-infrared illumination prototype connected to its controller" loading="lazy" decoding="async" />
+                  <p>Completed NIR prototype</p>
+                </div>
+                <div class="carousel-slide project-photo">
+                  <span class="art-index">04.2</span>
+                  <img src="assets/images/projects/nir/nirFinal2.jpg" alt="Near-infrared emitter array and controller electronics" loading="lazy" decoding="async" />
+                  <p>Emitter and electronics assembly</p>
+                </div>
+                <div class="carousel-slide project-photo image-contain">
+                  <span class="art-index">04.3</span>
+                  <img src="assets/images/projects/nir/nirPrototype.jpg" alt="Early circular near-infrared emitter-array prototype" loading="lazy" decoding="async" />
+                  <p>Early emitter-array prototype</p>
+                </div>
+                <div class="carousel-slide project-photo image-contain">
+                  <span class="art-index">04.4</span>
+                  <img src="assets/images/projects/nir/nirCAD.png" alt="CAD rendering of the circular near-infrared emitter housing" loading="lazy" decoding="async" />
+                  <p>Emitter housing CAD</p>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button type="button" data-carousel-prev aria-label="Previous NIR cuff image">←</button>
+                <span data-carousel-status aria-live="polite">1 / 4</span>
+                <button type="button" data-carousel-next aria-label="Next NIR cuff image">→</button>
+              </div>
             </div>
             <div class="project-copy">
               <div class="project-meta"><span>Medical Device</span><span>Lab99</span></div>
@@ -164,22 +327,6 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="project-art art-speaker" aria-hidden="true">
-              <span class="art-index">05</span>
-              <svg viewBox="0 0 500 320"><path d="M160 70h180v180H160zM160 115h180M205 70v45M295 70v45"/><circle cx="250" cy="183" r="42"/><circle cx="250" cy="183" r="12"/></svg>
-              <p>PROJECT IMAGE<br />COMING NEXT</p>
-            </div>
-            <div class="project-copy">
-              <div class="project-meta"><span>Personal Build</span><span>2024</span></div>
-              <h3>Minecraft Jukebox Speaker</h3>
-              <p>
-                Repaired and reused half of a failed speaker’s components, upgraded its
-                electronics, and iterated an interlocking printed enclosure to reduce total cost by 40%.
-              </p>
-              <ul class="tags"><li>Electronics</li><li>3D printing</li><li>Design for assembly</li></ul>
-            </div>
-          </article>
         </div>
       </section>
 
@@ -187,30 +334,30 @@
         <div class="section-heading reveal">
           <div>
             <p class="section-number">02 — Experience</p>
-            <h2 id="experience-heading">Engineering in context.</h2>
+            <h2 id="experience-heading">What I've done.</h2>
           </div>
           <p>Applying design fundamentals across aerospace, production environments, and academic research.</p>
         </div>
 
         <div class="timeline">
           <article class="timeline-item reveal">
-            <div class="timeline-date">2026 — Present</div>
-            <div><p class="timeline-kicker">Aerospace</p><h3>Northrop Grumman</h3><p>Mechanical Engineering Intern</p></div>
+            <div class="timeline-icon"><img src="assets/images/jobs/Northrop-Grumman-Emblem.png" alt="" width="3840" height="2160" loading="lazy" /></div>
+            <div class="timeline-company"><p class="timeline-kicker">Aerospace</p><h3>Northrop Grumman</h3><p class="timeline-date">2026 — Present</p><p class="timeline-role">Mechanical Engineering Intern</p></div>
             <p>Developing Siemens NX models, technical visualizations, requirements-supporting analyses, and qualified component solutions for complex mechanical systems.</p>
           </article>
           <article class="timeline-item reveal">
-            <div class="timeline-date">2025</div>
-            <div><p class="timeline-kicker">Manufacturing</p><h3>LaCore Nutraceuticals</h3><p>Manufacturing Engineer Intern</p></div>
+            <div class="timeline-icon"><img src="assets/images/jobs/LaCoreLogo.png" alt="" width="200" height="200" loading="lazy" /></div>
+            <div class="timeline-company"><p class="timeline-kicker">Manufacturing</p><h3>LaCore Nutraceuticals</h3><p class="timeline-date">2025</p><p class="timeline-role">Manufacturing Engineer Intern</p></div>
             <p>Improved equipment reliability through preventive-maintenance planning, production analysis, custom machine parts, and hands-on automation troubleshooting.</p>
           </article>
           <article class="timeline-item reveal">
-            <div class="timeline-date">2024 — 2026</div>
-            <div><p class="timeline-kicker">Research</p><h3>Human Robot Empowerment Lab</h3><p>Undergraduate Researcher</p></div>
+            <div class="timeline-icon"><img src="assets/images/jobs/HREIcon.png" alt="" width="1417" height="1417" loading="lazy" /></div>
+            <div class="timeline-company"><p class="timeline-kicker">Research</p><h3>Human Robot Empowerment Lab</h3><p class="timeline-date">2024 — 2026</p><p class="timeline-role">Undergraduate Researcher</p></div>
             <p>Created adaptable sEMG control systems and robotic hardware for rehabilitation research; co-authored work accepted to ICORR 2025.</p>
           </article>
           <article class="timeline-item reveal">
-            <div class="timeline-date">2024 — Present</div>
-            <div><p class="timeline-kicker">Leadership</p><h3>3D4E</h3><p>Co-founder + Technical Lead</p></div>
+            <div class="timeline-icon"><img src="assets/images/jobs/3d4e.png" alt="" width="252" height="253" loading="lazy" /></div>
+            <div class="timeline-company"><p class="timeline-kicker">Leadership</p><h3>3D4E</h3><p class="timeline-date">2024 — 2026</p><p class="timeline-role">Co-founder + Technical Lead</p></div>
             <p>Expanded access to additive-manufacturing skills through CAD workshops, team leadership, design reviews, and student-led builds.</p>
           </article>
         </div>
@@ -221,22 +368,50 @@
           <div class="section-heading reveal">
             <div>
               <p class="section-number">03 — About</p>
-              <h2 id="about-heading">Curious by design.</h2>
+              <h2 id="about-heading">What I am.</h2>
             </div>
+            <figure class="portrait-card">
+              <span class="portrait-corner portrait-corner-top" aria-hidden="true">
+                <b>J</b>
+                <span class="portrait-suits">
+                  <i class="suit-spade">♠</i><i class="suit-heart">♥</i>
+                  <i class="suit-diamond">♦</i><i class="suit-club">♣</i>
+                </span>
+              </span>
+              <div class="portrait-diamond">
+                <img
+                  src="assets/images/JIN03440.jpg"
+                  alt="Portrait of Evan Falconer"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+              <span class="portrait-corner portrait-corner-bottom" aria-hidden="true">
+                <b>J</b>
+                <span class="portrait-suits">
+                  <i class="suit-spade">♠</i><i class="suit-heart">♥</i>
+                  <i class="suit-diamond">♦</i><i class="suit-club">♣</i>
+                </span>
+              </span>
+              <figcaption>Jack of all trades</figcaption>
+            </figure>
           </div>
           <div class="about-copy reveal">
             <p class="about-lead">
-              I’m completing a B.S. in Mechanical Engineering with a minor in Computer Science
-              at the University of Utah, graduating in May 2027.
+              I’m a curious generalist at heart, most energized by problems that ask me
+              to connect ideas across disciplines.
             </p>
             <p>
-              My work sits where physical design meets software and real-world constraints.
-              I’m most energized by problems that require understanding the whole system,
-              building a solution, and learning from the test data.
+              My work starts with the end user, then brings together physical design, software,
+              and real-world constraints to build the right solution. My academic background at
+              the University of Utah centers on a B.S. in Mechanical Engineering, complemented by
+              minors in Computer Science and Biomedical Engineering.
             </p>
             <div class="skill-groups">
               <div><h3>Tools</h3><p>SolidWorks · Siemens NX · MATLAB · Simulink · Python · C# · ROS</p></div>
               <div><h3>Methods</h3><p>Mechanical design · CAD · 3D printing · Composite manufacturing · Prototyping · Testing</p></div>
+              <div><h3>Focus</h3><p>Human-centered design · User needs · Cross-disciplinary problem solving</p></div>
               <div><h3>Credentials</h3><p>SolidWorks CSWA · CSWA-AM · Composites Technician</p></div>
             </div>
           </div>
@@ -251,7 +426,7 @@
         </div>
         <div class="contact-footer">
           <p>© <span data-year></span> Evan Falconer</p>
-          <p>Designed with intent. Built to iterate.</p>
+          <p>Designed with intent. Designed for the user.</p>
           <a href="#top">Back to top ↑</a>
         </div>
       </section>
